@@ -10,12 +10,16 @@
     <!--container holding all calculator elements-->
     <div id="container">
       <div id="resultBox">
-        <div id="result">10,000</div>
+        <div id="resultBox">
+          <input id="result" readonly />
+        </div>
       </div>
       <div class="parent">
         <button id="btn0" onclick="userInput('0')">0</button>
-        <button id="btnC" onclick="userInput('c')">C</button>
-        <button class="operatorBtn" id="btnMin">-</button>
+        <button id="btnC" onclick="clearResult()">C</button>
+        <button class="operatorBtn" onclick="userInput('-')" id="btnMin">
+          -
+        </button>
         <button class="numBtn" id="btn9" onclick="userInput('9')">9</button>
         <button class="numBtn" id="btn8" onclick="userInput('8')">8</button>
         <button class="numBtn" id="btn6" onclick="userInput('6')">6</button>

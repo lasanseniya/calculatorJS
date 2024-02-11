@@ -17,15 +17,18 @@ body {
 #resultBox {
   position: relative;
   left: 30px;
-  width: 80%;
+  width: 50%;
   height: 16rem;
 }
 
 #resultBox #result {
+  width: 225px;
   font-size: 50px;
   font-family: "Lucida Sans Unicode";
   text-align: right;
-  color: #d8d8d8;
+  color: #c1c1c1fc;
+  background-color: #25252500;
+  border: none;
   position: relative;
   top: 60%;
 }
