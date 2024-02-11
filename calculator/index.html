@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--container holding all calculator elements-->
+    <div id="container">
+      <div id="resultBox">
+        <div id="result">10,000</div>
+      </div>
+      <div class="parent">
+        <button id="btn0" onclick="userInput('0')">0</button>
+        <button id="btnC" onclick="userInput('c')">C</button>
+        <button class="operatorBtn" id="btnMin">-</button>
+        <button class="numBtn" id="btn9" onclick="userInput('9')">9</button>
+        <button class="numBtn" id="btn8" onclick="userInput('8')">8</button>
+        <button class="numBtn" id="btn6" onclick="userInput('6')">6</button>
+        <button class="numBtn" id="btn5" onclick="userInput('5')">5</button>
+        <button class="numBtn" id="btn3" onclick="userInput('3')">3</button>
+        <button class="numBtn" id="btn2" onclick="userInput('2')">2</button>
+        <button class="numBtn" id="btn1" onclick="userInput('1')">1</button>
+        <button class="numBtn" id="btn4" onclick="userInput('4')">4</button>
+        <button class="numBtn" id="btn7" onclick="userInput('7')">7</button>
+        <button class="operatorBtn" id="btnDiv" onclick="userInput('/')">
+          /
+        </button>
+        <button class="numBtn" id="btnDot" onclick="userInput('.')">.</button>
+        <button class="operatorBtn" id="btnMultiply" onclick="userInput('*')">
+          *
+        </button>
+        <button class="operatorBtn" id="btnPlus" onclick="userInput('+')">
+          +
+        </button>
+        <button class="operatorBtn" id="btnEqual" onclick="userInput('=')">
+          =
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
