@@ -22,7 +22,7 @@ body {
 }
 
 #resultBox #result {
-  width: 225px;
+  width: 250px;
   font-size: 50px;
   font-family: "Lucida Sans Unicode";
   text-align: right;
@@ -75,7 +75,7 @@ button {
 }
 
 #btn0 {
-  grid-area: 5 / 1 / 6 / 3;
+  grid-area: 5 / 1 / 6 / 2; /* rowStart/ colStart/ rowEnd / colEnd*/
   background-color: #3d3d3d;
   color: #47a6ff;
   font-size: 25px;
@@ -88,7 +88,15 @@ button {
 }
 
 #btnC {
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1 / 1 / 2 / 3;
+  background-color: #737373;
+  color: #d8d8d8;
+  font-size: 25px;
+  border-radius: 15px;
+}
+
+#btnDel {
+  grid-area: 1 / 3 / 2 / 4;
   background-color: #737373;
   color: #d8d8d8;
   font-size: 25px;
@@ -100,9 +108,23 @@ button {
   cursor: pointer;
 }
 
-#btnMin {
-  grid-area: 1 / 2 / 2 / 3;
+#btnDel:hover {
+  background-color: rgb(145, 106, 78);
+  cursor: pointer;
 }
+
+#btnEqual {
+  background-color: #0078e8;
+  color: #7ae7ff;
+  font-size: 25px;
+  border-radius: 15px;
+}
+
+#btnEqual:hover {
+  background-color: rgb(37, 157, 255);
+  cursor: pointer;
+}
+
 #btn9 {
   grid-area: 2 / 1 / 3 / 2;
 }
@@ -131,17 +153,22 @@ button {
   grid-area: 2 / 3 / 3 / 4;
 }
 #btnDiv {
-  grid-area: 1 / 3 / 2 / 4;
-}
-#btnDot {
-  grid-area: 5 / 3 / 6 / 4;
-}
-#btnMultiply {
   grid-area: 1 / 4 / 2 / 5;
 }
-#btnPlus {
-  grid-area: 2 / 4 / 4 / 5;
+#btnDot {
+  grid-area: 5 / 2 / 6 / 3;
 }
+#btnMultiply {
+  grid-area: 2 / 4 / 2 / 5;
+}
+#btnPlus {
+  grid-area: 3 / 4 / 4 / 5;
+}
+
+#btnMin {
+  grid-area: 4 / 4 / 5 / 5;
+}
+
 #btnEqual {
-  grid-area: 4 / 4 / 6 / 5;
+  grid-area: 5 / 3 / 6 / 5;
 }

@@ -7,5 +7,3 @@ function userInput(input) {
 function clearResult() {
   resultDisplay.value = "";
 }
-
-function updateDisplay() {}
