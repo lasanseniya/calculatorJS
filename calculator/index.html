@@ -10,13 +10,12 @@
     <!--container holding all calculator elements-->
     <div id="container">
       <div id="resultBox">
-        <div id="resultBox">
-          <input id="result" readonly />
-        </div>
+        <input id="result" readonly />
       </div>
       <div class="parent">
         <button id="btn0" onclick="userInput('0')">0</button>
         <button id="btnC" onclick="clearResult()">C</button>
+        <button id="btnDel" onclick="del()">del</button>
         <button class="operatorBtn" onclick="userInput('-')" id="btnMin">
           -
         </button>
@@ -39,9 +38,7 @@
         <button class="operatorBtn" id="btnPlus" onclick="userInput('+')">
           +
         </button>
-        <button class="operatorBtn" id="btnEqual" onclick="userInput('=')">
-          =
-        </button>
+        <button id="btnEqual" onclick="userInput('=')">=</button>
       </div>
     </div>
     <script src="index.js"></script>
