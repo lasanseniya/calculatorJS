@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  background-color: rgb(181, 181, 181);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,6 +48,7 @@ body {
 
 button {
   border: none;
+  border-radius: 12px;
 }
 
 .numBtn {
@@ -57,7 +57,6 @@ button {
   width: 52px;
   height: 52px;
   font-size: 25px;
-  border-radius: 15px;
 }
 
 .numBtn:hover {
@@ -70,7 +69,6 @@ button {
   color: #7ae7ff;
   width: 52px;
   font-size: 25px;
-  border-radius: 15px;
 }
 
 .operatorBtn:hover {
@@ -83,7 +81,6 @@ button {
   background-color: #737373;
   color: #d8d8d8;
   font-size: 25px;
-  border-radius: 15px;
 }
 
 #btnDel {
@@ -92,7 +89,6 @@ button {
   color: #d8d8d8;
   font-size: 18px;
   font-weight: 540;
-  border-radius: 15px;
 }
 
 #btnClear:hover {
@@ -109,7 +105,6 @@ button {
   background-color: #0078e8;
   color: #7ae7ff;
   font-size: 25px;
-  border-radius: 15px;
 }
 
 #equalBtn:hover {
