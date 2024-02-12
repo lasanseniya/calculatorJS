@@ -1,7 +1,7 @@
 class Calculator {
-  constructor(previousLabel, currentLabel) {
-    this.previousLabel = previousLabel;
-    this.currentLabel = currentLabel;
+  constructor(previousLabelText, currentLabelText) {
+    this.previousLabelText = previousLabelText;
+    this.currentLabelText = currentLabelText;
     this.clear();
   }
 
@@ -15,24 +15,56 @@ class Calculator {
   delete() {}
 
   appendNumInput(input) {
-    // Fix the assignment of currentLabel
-    this.currentLabel = input;
-    console.log(currentLabel);
+    // If more than one period is entered stop adding more than periods
+    if (input === "." && this.currentLabel.includes(".")) {
+      return;
+    }
+
+    this.currentLabel = this.currentLabel.toString() + input.toString();
   }
 
-  operationChoice() {}
+  operationChoice(operator) {
+    if (this.currentLabel === "") {
+      return;
+    }
+
+    if (this.currentLabel !== "") {
+      this.evaluate();
+    }
+
+    this.operator = operator;
+    this.previousLabel = this.currentLabel;
+    this.currentLabel = "";
+  }
 
   evaluate() {}
 
-  updateResult() {}
+  updateResult() {
+    this.currentLabelText.innerHTML = this.currentLabel;
+    this.previousLabelText.innerHTML = this.previousLabel;
+  }
 }
 
-const numBtns = document.getElementsByClassName("numBtn");
-const operatorBtns = document.getElementsByClassName("operatorBtn");
-const equalBtn = document.getElementsByClassName("equalBtn");
-const delBtn = document.getElementsByClassName("btnDel");
-const delClear = document.getElementsByClassName("btnClear");
-const previousLabel = document.getElementsByClassName("previous");
-const currentLabel = document.getElementsByClassName("current");
+const numBtns = document.querySelectorAll("[data-number]");
+const operatorBtns = document.querySelectorAll("[data-operator]");
+// const equalBtn = document.getElementsByClassName("equalBtn");
+// const delBtn = document.getElementsByClassName("btnDel");
+// const delClear = document.getElementsByClassName("btnClear");
+const previousLabelText = document.getElementById("previous-num");
+const currentLabelText = document.getElementById("current-num");
 
-const calculator = new Calculator(previousLabel, currentLabel);
+const calculator = new Calculator(previousLabelText, currentLabelText);
+
+numBtns.forEach((button) => {
+  button.addEventListener("click", () => {
+    calculator.appendNumInput(button.innerHTML);
+    calculator.updateResult();
+  });
+});
+
+operatorBtns.forEach((button) => {
+  button.addEventListener("click", () => {
+    calculator.operationChoice(button.innerHTML);
+    calculator.updateResult();
+  });
+});
