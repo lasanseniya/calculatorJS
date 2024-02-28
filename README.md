@@ -7,6 +7,6 @@
 A calculator program developed to better understand the JS concepts. 
 Click the link below to check it out 👇🏼
 
-https://lasanseniya.github.io/calculatorJS/
+https://lasanseniya.github.io/win11-calculator/
 
 <img src="image.png" height="400px">
